@@ -14,11 +14,11 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
     return {
         mode,  // можно указать еще development
         entry: {
-            random_build: paths.entry, //ключ - название создаваемго файла, значение - путь
+            main: paths.entry, //ключ - название создаваемго файла, значение - путь
         },
         output: {
-            filename: "[name].js", // можно указать "[name].[contenthash].js" и тогда к имени файла добавится уникальный ключ
             path: paths.build,
+            filename: "[name].js", // можно указать "[name].[contenthash].js" и тогда к имени файла добавится уникальный ключ
             clean: true, // убирает лишние файлы при сборке
         },
         plugins: buildPlugin(options), // возвращаем массив плагинов из функции
