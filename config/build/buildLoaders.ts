@@ -4,6 +4,16 @@ import type {BuildOptions} from "./types/config";
 
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     // Если не используется typescript - нужен babel-loader
+
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    }
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset/resource'
+    }
+
     const typescriptLoader = {
             test: /\.tsx?$/,
             use: 'ts-loader',
@@ -29,6 +39,6 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         }
 
     return [
-        typescriptLoader, scssLoader
+        fileLoader, svgLoader, typescriptLoader, scssLoader
     ]
 }
