@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         'airbnb',
@@ -18,6 +19,7 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
+        'i18next',
     ],
     rules: {
         indent: [2, 4],
@@ -36,6 +38,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 0,
         'no-shadow': 0,
         'no-underscore-dangle': 'off',
+        'i18next/no-literal-string': [2, { markupOnly: true }],
 
     },
     globals: {
