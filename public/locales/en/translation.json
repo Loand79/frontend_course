@@ -3,5 +3,7 @@
   "Перевод": "Translation",
   "Главная страница": "Main page",
   "Язык": "English",
-  "Старница не найдена": "Page not found :("
+  "Старница не найдена": "Page not found :(",
+  "Произошла непредвиденная ошибка": "Something went wrong",
+  "Обновить станицу": "Reload page"
 }
