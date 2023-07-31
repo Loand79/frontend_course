@@ -1,4 +1,5 @@
 .button {
+    color: var(--main-color);
     cursor: pointer;
 }
 
@@ -7,4 +8,11 @@
     border: none;
     outline: none;
     padding: 0;
+}
+
+.outline {
+    background: none;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    padding: 10px 15px;
 }
