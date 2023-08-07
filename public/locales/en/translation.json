@@ -1,7 +1,7 @@
 {
   "Тестовый перевод": "Test translation",
   "Перевод": "Translation",
-  "Главная страница": "Main page",
+  "Главная": "Main page",
   "Язык": "English",
   "Старница не найдена": "Page not found :(",
   "Произошла непредвиденная ошибка": "Something went wrong",
@@ -9,5 +9,6 @@
   "throw error": "throw error",
   "Toggle": "Toggle",
   "Основная страница": "Main page",
-  "О нас": "About page"
+  "О нас": "About page",
+  "Короткий язык": "En"
 }
