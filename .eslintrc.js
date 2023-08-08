@@ -38,7 +38,7 @@ module.exports = {
         'react/display-name': 'off',
         'i18next/no-literal-string': [2, {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'theme'],
+            ignoreAttribute: ['data-testid', 'to', 'theme', 'size'],
         }],
     },
     globals: {
