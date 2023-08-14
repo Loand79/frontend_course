@@ -19,23 +19,23 @@ Primary.args = {
     children: 'Text',
 };
 
-Primary.decorators = [ThemeDecorator(Theme.LIGHT)];
-
 export const Clear = Template.bind({});
 Clear.args = {
     children: 'Text',
     theme: 'clear',
 };
 
-Clear.decorators = [ThemeDecorator(Theme.LIGHT)];
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+    children: 'Text',
+    theme: 'clearInverted',
+};
 
 export const Outline = Template.bind({});
 Outline.args = {
     children: 'Text',
     theme: 'outline',
 };
-
-Outline.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {

@@ -5,9 +5,12 @@
 
 .app {
     background: var(--bg-color);
+    min-height: 100vh;
+}
+
+body {
     color: var(--main-color);
     font: var(--font-m);
-    min-height: 100vh;
 }
 
 .content-page {
