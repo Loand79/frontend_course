@@ -11,5 +11,7 @@
   "Основная страница": "Main page",
   "О нас": "About page",
   "Короткий язык": "En",
-  "Войти": "Войти"
+  "Войти": "Войти",
+  "increment": "increment",
+  "decrement": "decrement"
 }
