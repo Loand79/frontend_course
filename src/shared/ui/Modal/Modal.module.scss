@@ -10,11 +10,6 @@
     z-index: -1;
 }
 
-.modal.dark {
-    --bg-color: #27c4b3;
-    --main-color: #8b1294;
-}
-
 .overlay {
     align-items: center;
     background: var(--overlay-color);
