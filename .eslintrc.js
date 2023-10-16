@@ -4,7 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['airbnb', 'plugin:react/recommended'],
+    extends: ['airbnb', 'plugin:react/recommended', 'plugin:i18next/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -36,9 +36,9 @@ module.exports = {
         'no-shadow': 0,
         'no-underscore-dangle': 'off',
         'react/display-name': 'off',
-        'i18next/no-literal-string': [2, {
+        'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'theme', 'size'],
+            ignoreAttribute: ['data-testid', 'to', 'theme', 'size', 'placeholder'],
         }],
         'jsx-a11y/click-events-have-key-events': 0,
         'jsx-a11y/no-static-element-interactions': 0,

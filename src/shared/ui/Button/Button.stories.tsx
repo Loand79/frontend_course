@@ -92,3 +92,10 @@ SquareSizeXl.args = {
     square: true,
     size: 'size_xl',
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: '>',
+    theme: 'outline',
+    disabled: true,
+};
