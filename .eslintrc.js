@@ -45,6 +45,7 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 0,
+        'no-trailing-spaces': 0,
     },
     globals: {
         __IS_DEV__: true,
