@@ -32,6 +32,7 @@ export const Input = memo((props: InputProps) => {
                 type={type}
                 value={value}
                 onChange={onChangeHandler}
+                {...otherProps}
             />
         </div>
     );

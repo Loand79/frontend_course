@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button/Button';
@@ -12,11 +12,12 @@ interface NavbarProps {
 
 }
 
-export function Navbar({ className }: NavbarProps) {
+export const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
     const dispatch = useDispatch();
+
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
     }, []);
@@ -61,4 +62,4 @@ export function Navbar({ className }: NavbarProps) {
             )}
         </div>
     );
-}
+});

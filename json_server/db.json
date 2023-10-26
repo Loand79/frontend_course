@@ -16,5 +16,13 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Kent",
+    "lastname": "Sknopkoi",
+    "age": 26,
+    "currency": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://sun9-23.userapi.com/c858224/v858224523/54e32/44HjLuUjtGo.jpg?ava=1"
+  }
 }
