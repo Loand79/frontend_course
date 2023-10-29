@@ -11,7 +11,9 @@
   "Основная страница": "Main page",
   "О нас": "About page",
   "Короткий язык": "En",
-  "Войти": "Войти",
+  "Войти": "Log in",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Вы ввели неправильный пароль": "Wrong password",
+  "Форма авторизации": "Authorization form"
 }
