@@ -52,6 +52,12 @@ export default {
         __API__: '',
     },
 
+    // A list of paths to directories that Jest should use to search for files in
+    // roots: [
+    //     '<rootDir>src',
+    //
+    // ],
+
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -133,11 +139,6 @@ export default {
     // restoreMocks: false,
 
     // The root directory that Jest should scan for tests and modules within
-
-    // A list of paths to directories that Jest should use to search for files in
-    // roots: [
-    //   "<rootDir>"
-    // ],
 
     // Allows you to use a custom runner instead of Jest's default test runner
     // runner: "jest-runner",
