@@ -1,4 +1,4 @@
-import { classNames, Modifiers } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import React, {
     MutableRefObject,
     ReactNode, useCallback, useEffect, useRef, useState,
@@ -71,7 +71,7 @@ export const Modal = (props: ModalProps) => {
         };
     }, [isOpen, onKeyDown]);
 
-    const mods: Modifiers = {
+    const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };

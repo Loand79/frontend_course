@@ -1,13 +1,37 @@
 {
   "posts": [
-    { "id": "1", "title": "json-server1", "author": "typicode" },
-    { "id": "2", "title": "json-server2", "author": "typicode" },
-    { "id": "3", "title": "json-server3", "author": "typicode" },
-    { "id": "5", "title": "json-server4", "author": "typicode" },
-    { "id": "6", "title": "json-server5", "author": "typicode" }
+    {
+      "id": "1",
+      "title": "json-server1",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server2",
+      "author": "typicode"
+    },
+    {
+      "id": "3",
+      "title": "json-server3",
+      "author": "typicode"
+    },
+    {
+      "id": "5",
+      "title": "json-server4",
+      "author": "typicode"
+    },
+    {
+      "id": "6",
+      "title": "json-server5",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": "1", "body": "some comment", "postId": 1 }
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
   ],
   "users": [
     {
@@ -19,10 +43,11 @@
   "profile": {
     "first": "Kent",
     "lastname": "Sknopkoi",
-    "age": 26,
-    "currency": "Russia",
-    "city": "Moscow",
+    "age": 56,
+    "currency": "EUR",
+    "city": "Sydney",
     "username": "admin",
-    "avatar": "https://sun9-23.userapi.com/c858224/v858224523/54e32/44HjLuUjtGo.jpg?ava=1"
+    "avatar": "https://sun9-23.userapi.com/c858224/v858224523/54e32/44HjLuUjtGo.jpg?ava=1",
+    "country": "Russia"
   }
 }

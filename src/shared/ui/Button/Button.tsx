@@ -1,10 +1,10 @@
-import { classNames, Modifiers } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import {
     ButtonHTMLAttributes, memo, ReactNode,
 } from 'react';
 import cls from './Button.module.scss';
 
-export type ButtonTheme = 'clear' | 'outline' | 'background' | 'backgroundInverted' | 'clearInverted'
+export type ButtonTheme = 'clear' | 'outline' | 'background' | 'backgroundInverted' | 'clearInverted' | 'outline_red'
 export type ButtonSize = 'size_m' | 'size_l'| 'size_xl'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
@@ -27,7 +27,7 @@ export const Button = memo((props: ButtonProps) => {
         ...otherProps
     } = props;
 
-    const mods: Modifiers = {
+    const mods: Mods = {
         [cls.square]: square,
         [cls[size]]: true,
         [cls.disabled]: disabled,
