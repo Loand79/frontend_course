@@ -12,5 +12,9 @@
   "Никнейм": "Username",
   "Фото": "Profile picture",
   "Укажите валюту": "Select currency",
-  "Укажите страну": "Укажите страну"
+  "Укажите страну": "Select country",
+  "Поля имя и фамилия должны быть заполнены": "Firstname and lastname are required",
+  "Некоректный возраст": "Incorrect age",
+  "Данные не указаны": "No data",
+  "Ошибка сервера при сохранении": "Server error on save"
 }
