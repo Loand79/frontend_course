@@ -19,6 +19,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             path: paths.build,
             filename: '[name].js', // можно указать "[name].[contenthash].js" и тогда к имени файла добавится уникальный ключ
             clean: true, // убирает лишние файлы при сборке
+            publicPath: '/',
         },
         plugins: buildPlugin(options), // возвращаем массив плагинов из функции
         module: {
