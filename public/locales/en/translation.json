@@ -16,5 +16,8 @@
   "increment": "increment",
   "decrement": "decrement",
   "Вы ввели неправильный пароль": "Wrong password",
-  "Форма авторизации": "Authorization form"
+  "Форма авторизации": "Authorization form",
+  "Произошла ошибка при загрузке статьи": "Произошла ошибка при загрузке статьи",
+  "Выйти": "Log out",
+  "Статьи": "Articles"
 }

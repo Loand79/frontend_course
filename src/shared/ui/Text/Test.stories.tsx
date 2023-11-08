@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Text } from './Text';
+import { Text, TextSize } from './Text';
 
 export default {
     title: 'shared/Text',
@@ -26,4 +26,18 @@ OnlyTitle.args = {
 export const OnlyText = Template.bind({});
 OnlyText.args = {
     text: 'Description Description Description Description Description ',
+};
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+    title: 'Title',
+    text: 'Description Description Description Description Description ',
+    size: TextSize.M,
+};
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+    title: 'Title',
+    text: 'Description Description Description Description Description ',
+    size: TextSize.L,
 };
