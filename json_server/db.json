@@ -102,6 +102,24 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "pidorasi",
+      "id": "3aHhaAN"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "pizda",
+      "id": "ivqrASf"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "ну че пидрилы",
+      "id": "Qzs89xA"
     }
   ],
   "users": [
@@ -120,14 +138,28 @@
       "avatar": "https://www.sostav.ru/articles/rus/2012/18.09/news/images/x5s0payf.jpg"
     }
   ],
-  "profile": {
-    "first": "kal",
-    "lastname": "pidor",
-    "age": 10,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://www.sostav.ru/articles/rus/2012/18.09/news/images/x5s0payf.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "suchka",
+      "lastname": "pidor",
+      "age": 10,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://www.sostav.ru/articles/rus/2012/18.09/news/images/x5s0payf.jpg"
+    },
+    {
+      "id": "2",
+      "first": "chmoha",
+      "lastname": "memnaya",
+      "age": 10,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://www.sostav.ru/articles/rus/2012/18.09/news/images/x5s0payf.jpg"
+    }
+  ]
 }
