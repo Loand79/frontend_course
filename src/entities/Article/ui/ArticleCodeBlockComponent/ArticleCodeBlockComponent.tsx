@@ -10,7 +10,7 @@ interface ArticleCodeBlockComponentProps {
 }
 
 export const ArticleCodeBlockComponent = memo(({ className, block }: ArticleCodeBlockComponentProps) => (
-    <div className={classNames(cls.ArticleCodeBlockComponent, {}, [className])}>
+    <div className={classNames('', {}, [className])}>
         <Code codeText={block.code} />
     </div>
 ));
