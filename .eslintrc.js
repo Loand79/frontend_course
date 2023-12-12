@@ -47,6 +47,7 @@ module.exports = {
         'no-param-reassign': 0,
         'no-trailing-spaces': 0,
         'no-undef': 0,
+        'react/no-array-index-key': 0,
     },
     globals: {
         __IS_DEV__: true,
