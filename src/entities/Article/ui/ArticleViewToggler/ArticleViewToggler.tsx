@@ -35,13 +35,14 @@ export const ArticleViewToggler = memo((props: ArticleViewTogglerProps) => {
         <div className={classNames(cls.ArticleViewToggler, {}, [className])}>
             {viewTypes.map((viewType) => (
                 <Button
+                    key={viewType.view}
                     theme="clear"
                     onClick={onClick(viewType.view)}
 
                 >
                     <Icon
                         Svg={viewType.icon}
-                        className={classNames('', { [cls.selected]: viewType.view == view })}
+                        className={classNames('', { [cls.selected]: viewType.view === view })}
                     />
                 </Button>
             ))}

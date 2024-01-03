@@ -7,11 +7,12 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Page } from 'shared/ui/Page/Page';
-import { fetchNextArticlePage } from 'pages/ArticlesPage/model/services/fetchNextArticlePage/fetchNextArticlePage';
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
+import { fetchNextArticlePage } from '../../model/services/fetchNextArticlePage/fetchNextArticlePage';
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import {
-    getArticlePageError, getArticlePageHasMore,
-    getArticlePageIsLoading, getArticlePageNum,
+    getArticlePageError,
+    getArticlePageInited,
+    getArticlePageIsLoading,
     getArticlePageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { articlePageActions, articlePageReducer, getArticles } from '../../model/slices/articlesPageSlice';
@@ -32,6 +33,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const isLoading = useSelector(getArticlePageIsLoading);
     const error = useSelector(getArticlePageError);
     const view = useSelector(getArticlePageView);
+    const inited = useSelector(getArticlePageInited); 
 
     const onChangeView = useCallback((view: ArticleView) => {
         dispatch(articlePageActions.setView(view));
@@ -42,10 +44,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(articlePageActions.initState());
-        dispatch(fetchArticlesList({
-            page: 1,
-        }));
+        dispatch(initArticlesPage());
     });
 
     if (error) {
