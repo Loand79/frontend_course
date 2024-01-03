@@ -6,10 +6,12 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
-import { fetchArticlesList } from '../../model/services/fetchArticlesList';
+import { Page } from 'shared/ui/Page/Page';
+import { fetchNextArticlePage } from 'pages/ArticlesPage/model/services/fetchNextArticlePage/fetchNextArticlePage';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
-    getArticlePageError,
-    getArticlePageIsLoading,
+    getArticlePageError, getArticlePageHasMore,
+    getArticlePageIsLoading, getArticlePageNum,
     getArticlePageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { articlePageActions, articlePageReducer, getArticles } from '../../model/slices/articlesPageSlice';
@@ -35,21 +37,31 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
         dispatch(articlePageActions.setView(view));
     }, [dispatch]);
 
+    const onLoadNextPart = useCallback(() => {
+        dispatch(fetchNextArticlePage());
+    }, [dispatch]);
+
     useInitialEffect(() => {
-        dispatch(fetchArticlesList());
         dispatch(articlePageActions.initState());
+        dispatch(fetchArticlesList({
+            page: 1,
+        }));
     });
+
+    if (error) {
+        // todo вывести ошибку
+    }
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.ArticlesPage, {}, [className])}>
+            <Page onScrollEnd={onLoadNextPart} className={classNames(cls.ArticlesPage, {}, [className])}>
                 <ArticleViewToggler view={view} onViewClick={onChangeView} />
                 <ArticleList
                     isLoading={isLoading}
                     view={view}
                     articles={articles}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };
