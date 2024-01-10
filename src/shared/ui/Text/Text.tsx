@@ -5,6 +5,7 @@ import cls from './Text.module.scss';
 export enum TextTheme {
     MAIN = 'main',
     ERROR = 'error',
+    INVERTED = 'inverted'
 }
 
 export enum TextAlign {
