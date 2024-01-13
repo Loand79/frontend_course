@@ -3,7 +3,6 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Page } from 'widgets/Page/Page';
 import { useParams } from 'react-router-dom';
-import cls from './ArticleEditPage.module.scss';
 
 interface ArticleEditPageProps {
     className?: string;
@@ -16,7 +15,7 @@ const ArticleEditPage = memo((props: ArticleEditPageProps) => {
     const isEdit = Boolean(id);
 
     return (
-        <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
+        <Page className={classNames('', {}, [className])}>
             {isEdit ? t(`Редактрование статьи с id = ${id}`) : t('Создание')}
         </Page>
     );
