@@ -13,7 +13,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'lo-and-plugin'],
     rules: {
         indent: [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -38,7 +38,7 @@ module.exports = {
         'react/display-name': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'theme', 'size', 'placeholder', 'target'],
+            ignoreAttribute: ['data-testid', 'to', 'theme', 'size', 'placeholder', 'target', 'direction', 'align', 'justify', 'gap'],
         }],
         'jsx-a11y/click-events-have-key-events': 0,
         'jsx-a11y/no-static-element-interactions': 0,
@@ -48,6 +48,7 @@ module.exports = {
         'no-trailing-spaces': 0,
         'no-undef': 0,
         'react/no-array-index-key': 0,
+        'lo-and-plugin/path-cheker': 'error',
     },
     globals: {
         __IS_DEV__: true,
@@ -57,6 +58,7 @@ module.exports = {
     overrides: [{
         files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
         rules: {
+            'react/jsx-props-no-spreading': 'off',
             'i18next/no-literal-string': 'off',
             'max-len': 0,
         },

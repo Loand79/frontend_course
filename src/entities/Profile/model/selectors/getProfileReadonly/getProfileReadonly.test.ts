@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getProfileReadonly } from 'entities/Profile';
+import { getProfileReadonly } from '../getProfileReadonly/getProfileReadonly';
 
 describe('getProfileReadonly', () => {
     test('should return true', () => {
