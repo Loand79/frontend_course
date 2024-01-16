@@ -38,7 +38,7 @@ module.exports = {
         'react/display-name': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'theme', 'size', 'placeholder', 'target', 'direction', 'align', 'justify', 'gap'],
+            ignoreAttribute: ['data-testid', 'to', 'theme', 'size', 'placeholder', 'target', 'direction', 'align', 'justify', 'gap', 'role'],
         }],
         'jsx-a11y/click-events-have-key-events': 0,
         'jsx-a11y/no-static-element-interactions': 0,

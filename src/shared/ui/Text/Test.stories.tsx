@@ -28,6 +28,13 @@ OnlyText.args = {
     text: 'Description Description Description Description Description ',
 };
 
+export const SizeS = Template.bind({});
+SizeS.args = {
+    title: 'Title',
+    text: 'Description Description Description Description Description ',
+    size: TextSize.S,
+};
+
 export const SizeM = Template.bind({});
 SizeM.args = {
     title: 'Title',
