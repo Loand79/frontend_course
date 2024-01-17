@@ -381,7 +381,8 @@
       "createdAt": "20.08.2021",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -805,7 +806,7 @@
       "first": "suchka",
       "lastname": "pidor",
       "age": 10,
-      "currency": "RUB",
+      "currency": "EUR",
       "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
