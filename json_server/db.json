@@ -789,15 +789,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
-      "avatar": "https://www.sostav.ru/articles/rus/2012/18.09/news/images/x5s0payf.jpg"
+      "roles": ["ADMIN"],
+      "avatar": "https://i.ytimg.com/vi/1M5eyeSm4Ds/maxresdefault.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
       "avatar": "https://www.sostav.ru/articles/rus/2012/18.09/news/images/x5s0payf.jpg"
+    },
+    {
+      "id": "3",
+      "username": "man",
+      "password": "321",
+      "roles": ["MANAGER"],
+      "avatar": "https://pipla.ru/wp-content/uploads/2016/04/menedzher-prestizhnaya-li-eto-professiya-1.jpg"
     }
   ],
   "profile": [
