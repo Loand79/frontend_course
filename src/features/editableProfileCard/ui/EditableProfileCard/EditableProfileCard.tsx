@@ -10,11 +10,11 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ProfileCard } from 'entities/Profile';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { VStack } from 'shared/ui/Stack';
+import { ValidateErrors } from '../../model/consts/validateErrors';
 import {
     EditableProfilePageHeader,
 } from '../EditableProfilePageHeader/ProfilePageHeader/ProfilePageHeader';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
-import { ValidateErrors } from '../../model/types/editableProfileCard';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
