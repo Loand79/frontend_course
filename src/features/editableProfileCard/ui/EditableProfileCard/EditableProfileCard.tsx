@@ -24,7 +24,7 @@ import { getProfileValidateErrors } from '../../model/selectors/getProfileValida
 
 interface editableProfileCardProps {
     className?: string;
-    id: string;
+    id?: string;
 }
 
 const reducers: ReducersList = {
