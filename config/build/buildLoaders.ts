@@ -15,16 +15,17 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         type: 'asset/resource',
     };
 
-    const babelLoader = buildBabelLoader(options);
+    const codeBabelLoader = buildBabelLoader({ ...options, isTsx: false });
+    const tsxBabelLoader = buildBabelLoader({ ...options, isTsx: true });
 
-    const typescriptLoader = {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-    };
+    // const typescriptLoader = {
+    //     test: /\.tsx?$/,
+    //     use: 'ts-loader',
+    //     exclude: /node_modules/,
+    // };
     const scssLoader = buildCssLoader(isDev);
 
     return [
-        fileLoader, svgLoader, babelLoader, typescriptLoader, scssLoader,
+        fileLoader, svgLoader, codeBabelLoader, tsxBabelLoader, scssLoader,
     ];
 }
