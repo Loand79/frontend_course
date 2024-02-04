@@ -1,9 +1,11 @@
 import { Menu } from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Fragment, ReactNode } from 'react';
-import { DropdownDirection } from 'shared/types/ui';
-import { AppLink } from '../AppLink/AppLink';
+import { mapDirection } from '../../styles/consts';
+import { DropdownDirection } from '../../../../types/ui';
+import { AppLink } from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
+import popupCls from '../../styles/popups.module.scss';
 
 export interface DropdownItem {
     disabled?: boolean;
@@ -19,13 +21,6 @@ interface DropdownProps {
     direction?: DropdownDirection;
 }
 
-const mapDirection: Record<DropdownDirection, string> = {
-    'top right': cls.optionsTopRight,
-    'bottom right': cls.optionsBottomRight,
-    'top left': cls.optionsTopLeft,
-    'bottom left': cls.optionsBottomLeft,
-};
-
 export function Dropdown(props: DropdownProps) {
     const {
         className, trigger, items, direction = 'bottom right', 
@@ -34,8 +29,8 @@ export function Dropdown(props: DropdownProps) {
     const menuClasses = [mapDirection[direction]];
 
     return (
-        <Menu as="div" className={classNames(cls.Dropdown, {}, [className])}>
-            <Menu.Button className={cls.btn}>
+        <Menu as="div" className={classNames(cls.Dropdown, {}, [className, popupCls.popup])}>
+            <Menu.Button className={popupCls.trigger}>
                 {trigger}
             </Menu.Button>
             <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
@@ -43,7 +38,7 @@ export function Dropdown(props: DropdownProps) {
                     const content = ({ active } : {active: boolean}) => (
                         <button
                             type="button"
-                            className={classNames(cls.item, { [cls.active]: active })}
+                            className={classNames(cls.item, { [popupCls.active]: active })}
                             onClick={item.onClick}
                         >
                             {item.content}
