@@ -1,6 +1,9 @@
-.modal {
+.Modal {
+    align-items: center;
     bottom: 0;
-    color: var(--main-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
     left: 0;
     opacity: 0;
     pointer-events: none;
