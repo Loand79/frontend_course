@@ -823,21 +823,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://i.ytimg.com/vi/1M5eyeSm4Ds/maxresdefault.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://www.sostav.ru/articles/rus/2012/18.09/news/images/x5s0payf.jpg"
     },
     {
       "id": "3",
       "username": "man",
       "password": "321",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://pipla.ru/wp-content/uploads/2016/04/menedzher-prestizhnaya-li-eto-professiya-1.jpg"
     }
   ],
@@ -863,6 +869,65 @@
       "city": "Moscow",
       "username": "admin213",
       "avatar": "https://www.sostav.ru/articles/rus/2012/18.09/news/images/x5s0payf.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": "5",
+      "feedback": "жОская статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": "3",
+      "feedback": "не жОская статья",
+      "userId": "2",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "id": "avwUqux"
+    },
+    {
+      "userId": "1",
+      "id": "ti9_LOl"
+    },
+    {
+      "userId": "1",
+      "id": "7K7X6AO"
+    },
+    {
+      "userId": "1",
+      "id": "DuFqx4S"
+    },
+    {
+      "userId": "1",
+      "id": "H2mZrog"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 2,
+      "feedback": "вот так вот",
+      "id": "3YMObL3"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": "5",
+      "feedback": "жОская статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": "3",
+      "feedback": "не жОская статья",
+      "userId": "2",
+      "profileId": "2"
     }
   ]
 }
