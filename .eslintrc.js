@@ -62,7 +62,7 @@ module.exports = {
         'no-trailing-spaces': 0,
         'no-undef': 0,
         'react/no-array-index-key': 0,
-        'lo-and-plugin/path-cheker': 'error',
+        'lo-and-plugin/path-cheker': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
