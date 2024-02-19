@@ -63,7 +63,13 @@ module.exports = {
         'no-undef': 0,
         'react/no-array-index-key': 0,
         'lo-and-plugin/path-cheker': ['error', { alias: '@' }],
-        'lo-and-plugin/public-api-imports': ['error', { alias: '@' }],
+        'lo-and-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
