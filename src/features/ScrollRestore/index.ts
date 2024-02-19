@@ -1,4 +1,4 @@
-export { getScrollPosition } from './model/selectors/getScrollPosiotion';
+export { getScrollPosition, getScrollByPath } from './model/selectors/getScrollPosition';
 
 export type { ScrollRestoreSchema } from './model/types/ScrollRestoreSchema';
 

@@ -9,7 +9,7 @@ import { ArticleDetailsSchema } from '@/entities/Article';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { ScrollRestoreSchema } from '@/features/ScrollRestore';
-import { ArticleDetailsPageSchema } from '@/pages/ArticlesDetailsPage/model/types';
+import { ArticleDetailsPageSchema } from '@/pages/ArticlesDetailsPage';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { ProfileSchema } from '@/features/editableProfileCard';
 
