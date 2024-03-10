@@ -1,7 +1,7 @@
-export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
+export { ArticleTypeTabs } from '@/features/ArticleTypeTabs/ArticleTypeTabs';
 
-export { ArticleViewToggler } from './ui/ArticleViewToggler/ArticleViewToggler';
-export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
+export { ArticleViewToggler } from '@/features/ArticleViewToggler/ArticleViewToggler';
+export { ArticleSortSelector } from '@/features/ArticleSortSelector/ArticleSortSelector';
 export { ArticleList } from './ui/ArticleList/ArticleList';
 export type { Article } from './model/types/article';
 export { getArticleDetailsData } from './model/selectors/articleDetails';
