@@ -1,1 +1,1 @@
-console.log('Cache was cleared');
+console.log("Cache was cleared");

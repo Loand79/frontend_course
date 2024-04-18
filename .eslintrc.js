@@ -4,7 +4,12 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['airbnb', 'plugin:react/recommended', 'plugin:i18next/recommended'],
+    extends: [
+        'airbnb',
+        'plugin:react/recommended',
+        'plugin:i18next/recommended',
+        'prettier',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -13,20 +18,30 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'lo-and-plugin', 'unused-imports'],
+    plugins: [
+        'react',
+        '@typescript-eslint',
+        'i18next',
+        'react-hooks',
+        'lo-and-plugin',
+        'unused-imports',
+    ],
     rules: {
-        indent: [2, 4],
         'unused-imports/no-unused-imports': 'error',
-        'react/jsx-indent-props': [2, 4],
-        'react/jsx-indent': [2, 4],
-        'react/jsx-filename-extension': [2, {
-            extensions: ['.js', '.jsx', 'ts', '.tsx'],
-        }],
+        'react/jsx-filename-extension': [
+            2,
+            {
+                extensions: ['.js', '.jsx', 'ts', '.tsx'],
+            },
+        ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
-        'max-len': [1, {
-            code: 150,
-        }],
+        'max-len': [
+            1,
+            {
+                code: 150,
+            },
+        ],
         'no-unused-vars': 1,
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
@@ -37,24 +52,28 @@ module.exports = {
         'no-shadow': 0,
         'no-underscore-dangle': 'off',
         'react/display-name': 'off',
-        'i18next/no-literal-string': ['error', {
-            markupOnly: true,
-            ignoreAttribute: [
-                'data-testid',
-                'to',
-                'theme',
-                'size',
-                'placeholder',
-                'target',
-                'direction',
-                'align',
-                'justify',
-                'gap',
-                'role',
-                'as',
-                'border',
-            ],
-        }],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: [
+                    'data-testid',
+                    'to',
+                    'theme',
+                    'size',
+                    'placeholder',
+                    'target',
+                    'direction',
+                    'align',
+                    'justify',
+                    'gap',
+                    'role',
+                    'as',
+                    'border',
+                ],
+            },
+        ],
+        'react/jsx-max-props-per-line': [1, { maximum: 3 }],
         'jsx-a11y/click-events-have-key-events': 0,
         'jsx-a11y/no-static-element-interactions': 0,
         'react-hooks/rules-of-hooks': 'error',
@@ -68,7 +87,11 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.stories.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
         'lo-and-plugin/layer-imports': [
@@ -84,12 +107,14 @@ module.exports = {
         __API__: true,
         __PROJECT__: true,
     },
-    overrides: [{
-        files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
-        rules: {
-            'react/jsx-props-no-spreading': 'off',
-            'i18next/no-literal-string': 'off',
-            'max-len': 0,
+    overrides: [
+        {
+            files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+            rules: {
+                'react/jsx-props-no-spreading': 'off',
+                'i18next/no-literal-string': 'off',
+                'max-len': 0,
+            },
         },
-    }],
+    ],
 };

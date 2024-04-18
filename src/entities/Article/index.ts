@@ -8,5 +8,8 @@ export { getArticleDetailsData } from './model/selectors/articleDetails';
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
 export type { ArticleDetailsSchema } from './model/types/ArticleDetailsSchema';
 export {
-    ArticleBlockType, ArticleView, ArticleType, ArticleSortField, 
+    ArticleBlockType,
+    ArticleView,
+    ArticleType,
+    ArticleSortField,
 } from './model/consts/articleEnums';

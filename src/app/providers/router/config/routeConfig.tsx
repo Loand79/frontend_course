@@ -9,8 +9,13 @@ import { ForbiddenPage } from '@/pages/ForbiddenPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 import {
     AppRoutes,
-    getRouteAbout, getRouteAdminPanel, getRouteArticleDetails, getRouteArticleEdit, getRouteArticleNew,
-    getRouteArticles, getRouteForbidden,
+    getRouteAbout,
+    getRouteAdminPanel,
+    getRouteArticleDetails,
+    getRouteArticleEdit,
+    getRouteArticleNew,
+    getRouteArticles,
+    getRouteForbidden,
     getRouteMain,
     getRouteProfile,
 } from '@/shared/const/router';
@@ -55,7 +60,6 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
         element: <AdminPanelPage />,
         authOnly: true,
         role: ['ADMIN', 'MANAGER'],
-
     },
     [AppRoutes.FORBIDDEN]: {
         path: getRouteForbidden(),

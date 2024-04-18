@@ -16,7 +16,9 @@ interface ProfilePageHeaderProps {
     className?: string;
 }
 
-export const EditableProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
+export const EditableProfilePageHeader = ({
+    className,
+}: ProfilePageHeaderProps) => {
     const { t } = useTranslation('profile');
     const authData = useSelector(getUserAuthData);
     const profileData = useSelector(getProfileData);
@@ -38,38 +40,30 @@ export const EditableProfilePageHeader = ({ className }: ProfilePageHeaderProps)
     }, [dispatch]);
 
     return (
-        <HStack max justify="between" className={classNames('', {}, [className])}>
+        <HStack
+            max
+            justify="between"
+            className={classNames('', {}, [className])}
+        >
             <Text title={t('Профиль')} />
             {canEdit && (
                 <div>
                     {readonly ? (
-                        <Button
-                            theme="outline"
-                            onClick={onEdit}
-                        >
+                        <Button theme="outline" onClick={onEdit}>
                             {t('Редактировать')}
                         </Button>
-
-                    )
-                        : (
-                            <HStack gap="8">
-                                <Button
-                                    theme="outline_red"
-                                    onClick={onCancelEdit}
-                                >
-                                    {t('Отменить')}
-                                </Button>
-                                <Button
-                                    theme="outline"
-                                    onClick={onSave}
-                                >
-                                    {t('Сохранить')}
-                                </Button>
-                            </HStack>
-                        )}
+                    ) : (
+                        <HStack gap="8">
+                            <Button theme="outline_red" onClick={onCancelEdit}>
+                                {t('Отменить')}
+                            </Button>
+                            <Button theme="outline" onClick={onSave}>
+                                {t('Сохранить')}
+                            </Button>
+                        </HStack>
+                    )}
                 </div>
             )}
-
         </HStack>
     );
 };

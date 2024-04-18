@@ -18,28 +18,13 @@ export default {
     // Automatically clear mock calls, instances and results before every test
     clearMocks: true,
     testEnvironment: 'jsdom',
-    moduleDirectories: [
-        'node_modules',
-    ],
-    coveragePathIgnorePatterns: [
-        '\\\\node_modules\\\\',
-    ],
-    modulePaths: [
-        '<rootDir>src',
-    ],
-    moduleFileExtensions: [
-        'js',
-        'jsx',
-        'ts',
-        'tsx',
-        'json',
-        'node',
-    ],
+    moduleDirectories: ['node_modules'],
+    coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
+    modulePaths: ['<rootDir>src'],
+    moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
 
     rootDir: '../../',
-    testMatch: [
-        '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
-    ],
+    testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
@@ -56,12 +41,15 @@ export default {
 
     reporters: [
         'default',
-        ['jest-html-reporters', {
-            publicPath: '<rootDir>/reports/unit',
-            filename: 'report.html',
-            openReport: true,
-            inlineSource: true,
-        }],
+        [
+            'jest-html-reporters',
+            {
+                publicPath: '<rootDir>/reports/unit',
+                filename: 'report.html',
+                openReport: true,
+                inlineSource: true,
+            },
+        ],
     ],
 
     // A list of paths to directories that Jest should use to search for files in

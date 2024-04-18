@@ -10,7 +10,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleViewToggler>;
 
-const Template: ComponentStory<typeof ArticleViewToggler> = (args) => <ArticleViewToggler {...args} />;
+const Template: ComponentStory<typeof ArticleViewToggler> = (args) => (
+    <ArticleViewToggler {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

@@ -23,9 +23,10 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     return (
         <aside
             data-testid="sidebar"
-            className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
+            className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
+                className,
+            ])}
         >
-
             <Button
                 data-testid="sidebar-toggle"
                 onClick={onToggle}

@@ -12,15 +12,15 @@ describe('getProfileValidateErrors', () => {
                 ],
             },
         };
-        expect(getProfileValidateErrors(state as StateSchema)).toEqual(
-            [
-                ValidateErrors.SERVER_ERROR,
-                ValidateErrors.INCORRECT_USER_AGE,
-            ],
-        );
+        expect(getProfileValidateErrors(state as StateSchema)).toEqual([
+            ValidateErrors.SERVER_ERROR,
+            ValidateErrors.INCORRECT_USER_AGE,
+        ]);
     });
     test('should return undefined with empty errors array', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getProfileValidateErrors(state as StateSchema)).toEqual(undefined);
+        expect(getProfileValidateErrors(state as StateSchema)).toEqual(
+            undefined,
+        );
     });
 });

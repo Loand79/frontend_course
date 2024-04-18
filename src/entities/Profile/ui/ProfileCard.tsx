@@ -45,7 +45,14 @@ export const ProfileCard = ({
 
     if (isLoading) {
         return (
-            <HStack justify="center" className={classNames(cls.profileCard, { [cls.loading]: true }, [className])}>
+            <HStack
+                justify="center"
+                className={classNames(
+                    cls.profileCard,
+                    { [cls.loading]: true },
+                    [className],
+                )}
+            >
                 <Loader />
             </HStack>
         );
@@ -53,7 +60,14 @@ export const ProfileCard = ({
 
     if (error) {
         return (
-            <HStack justify="center" max className={classNames(cls.profileCard, {}, [className, cls.error])}>
+            <HStack
+                justify="center"
+                max
+                className={classNames(cls.profileCard, {}, [
+                    className,
+                    cls.error,
+                ])}
+            >
                 <Text
                     theme={TextTheme.ERROR}
                     title={t('Произошла ошибка при загрузке профиля')}
@@ -69,8 +83,11 @@ export const ProfileCard = ({
     };
     // todo замутить инпут лист по всем полям Profile
     return (
-        <VStack gap="16" max className={classNames(cls.profileCard, mods, [className])}>
-
+        <VStack
+            gap="16"
+            max
+            className={classNames(cls.profileCard, mods, [className])}
+        >
             {data?.avatar && (
                 <HStack justify="center" className={cls.avatarWrapper}>
                     <Avatar src={data.avatar} size={100} />
@@ -90,7 +107,8 @@ export const ProfileCard = ({
                 onChange={onChangeLastname}
                 readonly={readonly}
             />
-            { // todo валидация инпута с возрастом по регулярке
+            {
+                // todo валидация инпута с возрастом по регулярке
             }
             <Input
                 value={data?.age}

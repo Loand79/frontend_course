@@ -14,7 +14,11 @@ export const validateProfileData = (profile?: Profile) => {
         errors.push(ValidateErrors.INCORRECT_USER_DATA);
     }
 
-    if (!age || !Number.isInteger(age) || (/^\d+$/.test(String(age)) && age > 100)) {
+    if (
+        !age ||
+        !Number.isInteger(age) ||
+        (/^\d+$/.test(String(age)) && age > 100)
+    ) {
         errors.push(ValidateErrors.INCORRECT_USER_AGE);
     }
     return errors;

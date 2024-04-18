@@ -20,7 +20,10 @@ export const counterSlice = buildSlice({
             state.value -= 1;
         },
     },
-
 });
 
-export const { actions: counterActions, reducer: counterReducer, useActions: useCounterActions } = counterSlice;
+export const {
+    actions: counterActions,
+    reducer: counterReducer,
+    useActions: useCounterActions,
+} = counterSlice;

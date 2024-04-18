@@ -13,14 +13,15 @@ export default {
     decorators: [withMock],
 } as ComponentMeta<typeof NotificationList>;
 
-const Template: ComponentStory<typeof NotificationList> = (args) => <NotificationList {...args} />;
+const Template: ComponentStory<typeof NotificationList> = (args) => (
+    <NotificationList {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};
 Normal.decorators = [StoreDecorator({})];
 
 Normal.parameters = {
-
     mockData: [
         {
             url: `${__API__}/notifications`,
@@ -31,19 +32,16 @@ Normal.parameters = {
                     id: '1',
                     title: 'Уведомление',
                     description: 'новое уведомление от пользоователя X',
-
                 },
                 {
                     id: '2',
                     title: 'Уведомление 2',
                     description: 'новое уведомление от пользоователя X',
-
                 },
                 {
                     id: '3',
                     title: 'Уведомление 3',
                     description: 'новое уведомление от пользоователя X',
-
                 },
             ],
         },

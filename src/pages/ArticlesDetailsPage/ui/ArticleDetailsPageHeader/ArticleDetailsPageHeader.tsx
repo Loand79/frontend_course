@@ -14,36 +14,38 @@ interface ArticleDetailsPageHeaderProps {
     className?: string;
 }
 
-export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderProps) => {
-    const { className } = props;
-    const { t } = useTranslation();
-    const navigate = useNavigate();
-    const userData = useSelector(getUserAuthData);
-    const article = useSelector(getArticleDetailsData);
-    const canEdit = useSelector(getCanEditArticle);
+export const ArticleDetailsPageHeader = memo(
+    (props: ArticleDetailsPageHeaderProps) => {
+        const { className } = props;
+        const { t } = useTranslation();
+        const navigate = useNavigate();
+        const userData = useSelector(getUserAuthData);
+        const article = useSelector(getArticleDetailsData);
+        const canEdit = useSelector(getCanEditArticle);
 
-    const onBackToList = useCallback(() => {
-        navigate(getRouteArticles());
-    }, [navigate]);
+        const onBackToList = useCallback(() => {
+            navigate(getRouteArticles());
+        }, [navigate]);
 
-    const onEditArticle = useCallback(() => {
-        if (article) {
-            navigate(getRouteArticleEdit(article.id));
-        }
-    }, [article, navigate]);
+        const onEditArticle = useCallback(() => {
+            if (article) {
+                navigate(getRouteArticleEdit(article.id));
+            }
+        }, [article, navigate]);
 
-    return (
-        <HStack max justify="between" className={classNames('', {}, [className])}>
-            <Button onClick={onBackToList}>
-                {t('Назад')}
-            </Button>
-            {canEdit && (
-                <Button
-                    onClick={onEditArticle}
-                >
-                    {t('Редактировать')}
-                </Button>
-            )}
-        </HStack>
-    );
-});
+        return (
+            <HStack
+                max
+                justify="between"
+                className={classNames('', {}, [className])}
+            >
+                <Button onClick={onBackToList}>{t('Назад')}</Button>
+                {canEdit && (
+                    <Button onClick={onEditArticle}>
+                        {t('Редактировать')}
+                    </Button>
+                )}
+            </HStack>
+        );
+    },
+);

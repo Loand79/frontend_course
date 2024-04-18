@@ -11,10 +11,14 @@ export default {
     },
 } as ComponentMeta<typeof LoginForm>;
 
-const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args} />;
+const Template: ComponentStory<typeof LoginForm> = (args) => (
+    <LoginForm {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};
-Primary.decorators = [StoreDecorator({
-    loginForm: { username: '123', password: '123' },
-})];
+Primary.decorators = [
+    StoreDecorator({
+        loginForm: { username: '123', password: '123' },
+    }),
+];

@@ -4,11 +4,7 @@ import { Page } from '@/widgets/Page';
 
 const ForbiddenPage = () => {
     const { t } = useTranslation();
-    return (
-        <Page>
-            {t('У вас не доступа к этой странице')}
-        </Page>
-    );
+    return <Page>{t('У вас не доступа к этой странице')}</Page>;
 };
 
 export default ForbiddenPage;

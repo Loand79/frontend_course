@@ -20,24 +20,22 @@ describe('validateProfileData.test', () => {
     });
 
     test('without first and lastname', async () => {
-        const result = validateProfileData({ ...data, first: '', lastname: '' });
-        expect(result).toEqual([
-            ValidateErrors.INCORRECT_USER_DATA,
-        ]);
+        const result = validateProfileData({
+            ...data,
+            first: '',
+            lastname: '',
+        });
+        expect(result).toEqual([ValidateErrors.INCORRECT_USER_DATA]);
     });
 
     test('incorrect age', async () => {
         const result = validateProfileData({ ...data, age: NaN });
-        expect(result).toEqual([
-            ValidateErrors.INCORRECT_USER_AGE,
-        ]);
+        expect(result).toEqual([ValidateErrors.INCORRECT_USER_AGE]);
     });
 
     test('age is upper 100', async () => {
         const result = validateProfileData({ ...data, age: 101 });
-        expect(result).toEqual([
-            ValidateErrors.INCORRECT_USER_AGE,
-        ]);
+        expect(result).toEqual([ValidateErrors.INCORRECT_USER_AGE]);
     });
 
     test('incorrect all', async () => {

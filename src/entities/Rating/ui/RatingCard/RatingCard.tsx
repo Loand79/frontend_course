@@ -22,21 +22,30 @@ interface RatingCardProps {
 
 export const RatingCard = memo((props: RatingCardProps) => {
     const {
-        className, onCancel, onAccept, title, feedbackTitle, hasFeedback, rate = 0,
+        className,
+        onCancel,
+        onAccept,
+        title,
+        feedbackTitle,
+        hasFeedback,
+        rate = 0,
     } = props;
     const { t } = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [starsCount, setStartCount] = useState(rate);
     const [feedback, setFeedback] = useState('');
 
-    const onSelectStars = useCallback((selectedStarsCount: number) => {
-        setStartCount(selectedStarsCount);
-        if (hasFeedback) {
-            setIsModalOpen(true);
-        } else {
-            onAccept?.(selectedStarsCount);
-        }
-    }, [hasFeedback, onAccept]);
+    const onSelectStars = useCallback(
+        (selectedStarsCount: number) => {
+            setStartCount(selectedStarsCount);
+            if (hasFeedback) {
+                setIsModalOpen(true);
+            } else {
+                onAccept?.(selectedStarsCount);
+            }
+        },
+        [hasFeedback, onAccept],
+    );
 
     const acceptHandle = useCallback(() => {
         setIsModalOpen(false);
@@ -50,9 +59,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
 
     const modalContent = (
         <>
-            <Text
-                title={feedbackTitle}
-            />
+            <Text title={feedbackTitle} />
             <Input
                 value={feedback}
                 onChange={setFeedback}
@@ -65,7 +72,11 @@ export const RatingCard = memo((props: RatingCardProps) => {
         <Card className={className} max>
             <VStack align="center" gap="8">
                 <Text title={starsCount ? t('Спасибо за оценку') : title} />
-                <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
+                <StarRating
+                    selectedStars={starsCount}
+                    size={40}
+                    onSelect={onSelectStars}
+                />
             </VStack>
             <BrowserView>
                 <Modal isOpen={isModalOpen} lazy>

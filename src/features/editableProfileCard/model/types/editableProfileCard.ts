@@ -11,7 +11,7 @@ export interface ProfileSchema {
 }
 
 export type ValidateProfileErrors =
-    'INCORRECT_USER_DATA'
+    | 'INCORRECT_USER_DATA'
     | 'INCORRECT_USER_AGE'
     | 'NO_DATA'
-    | 'SERVER_ERROR'
+    | 'SERVER_ERROR';
