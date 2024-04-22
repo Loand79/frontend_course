@@ -4,12 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: [
-        'airbnb',
-        'plugin:react/recommended',
-        'plugin:i18next/recommended',
-        'prettier',
-    ],
+    extends: ['airbnb', 'plugin:react/recommended', 'plugin:i18next/recommended', 'prettier'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -18,14 +13,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: [
-        'react',
-        '@typescript-eslint',
-        'i18next',
-        'react-hooks',
-        'lo-and-plugin',
-        'unused-imports',
-    ],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'lo-and-plugin', 'unused-imports'],
     rules: {
         'unused-imports/no-unused-imports': 'error',
         'react/jsx-filename-extension': [
@@ -82,16 +70,13 @@ module.exports = {
         'no-trailing-spaces': 0,
         'no-undef': 0,
         'react/no-array-index-key': 0,
+        'react/no-unstable-nested-components': 'warn',
         'lo-and-plugin/path-cheker': ['error', { alias: '@' }],
         'lo-and-plugin/public-api-imports': [
             'error',
             {
                 alias: '@',
-                testFilesPatterns: [
-                    '**/*.test.*',
-                    '**/*.stories.*',
-                    '**/StoreDecorator.tsx',
-                ],
+                testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'],
             },
         ],
         'lo-and-plugin/layer-imports': [
