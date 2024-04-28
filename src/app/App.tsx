@@ -17,13 +17,7 @@ function App() {
     }, [dispatch]);
 
     return (
-        <div
-            className={classNames(
-                'app',
-                { hovered: true, selected: false },
-                [],
-            )}
-        >
+        <div className={classNames('app', { hovered: true, selected: false }, [theme])}>
             <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">

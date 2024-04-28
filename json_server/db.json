@@ -807,6 +807,10 @@
                 "isArticleRatingEnabled": true,
                 "isCounterEnabled": true
             },
+            "jsonSettings": {
+                "theme": "app_dark_theme",
+                "isFirstVisit": true
+            },
             "avatar": "https://i.ytimg.com/vi/1M5eyeSm4Ds/maxresdefault.jpg"
         },
         {
@@ -818,6 +822,10 @@
                 "isArticleRatingEnabled": false,
                 "isCounterEnabled": true
             },
+            "jsonSettings": {
+                "theme": "app_dark_theme",
+                "isFirstVisit": true
+            },
             "avatar": "https://www.sostav.ru/articles/rus/2012/18.09/news/images/x5s0payf.jpg"
         },
         {
@@ -828,6 +836,10 @@
             "features": {
                 "isArticleRatingEnabled": false,
                 "isCounterEnabled": false
+            },
+            "jsonSettings": {
+                "theme": "app_dark_theme",
+                "isFirstVisit": true
             },
             "avatar": "https://pipla.ru/wp-content/uploads/2016/04/menedzher-prestizhnaya-li-eto-professiya-1.jpg"
         }
