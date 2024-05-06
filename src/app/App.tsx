@@ -7,6 +7,8 @@ import { getUserInited, initAuthData } from '@/entities/User';
 import { AppRouter } from './providers/router';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { PageLoader } from '@/widgets/PageLoader';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { MainLayout } from '@/shared/layouts';
 
 function App() {
     const { theme } = useTheme();
@@ -22,15 +24,27 @@ function App() {
     }
 
     return (
-        <div className={classNames('app', { hovered: true, selected: false }, [theme])}>
-            <Suspense fallback="">
-                <Navbar />
-                <div className="content-page">
-                    <Sidebar />
-                    {inited && <AppRouter />}
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <Suspense fallback="">
+                    <MainLayout header={<Navbar />} content={<AppRouter />} sidebar={<Sidebar />} />
+                </Suspense>
+            }
+            off={
+                <div className={classNames('app', { hovered: true, selected: false }, [theme])}>
+                    <div className={classNames('app_redesigned', { hovered: true, selected: false }, [theme])}>
+                        <Suspense fallback="">
+                            <Navbar />
+                            <div className="content-page">
+                                <Sidebar />
+                                <AppRouter />
+                            </div>
+                        </Suspense>
+                    </div>
                 </div>
-            </Suspense>
-        </div>
+            }
+        />
     );
 }
 

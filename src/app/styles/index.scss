@@ -9,9 +9,11 @@
     min-height: 100vh;
 }
 
-body {
-    color: var(--main-color);
-    font: var(--font-m);
+.app_redesigned {
+    background: var(--bg-redesigned);
+    color: var(--text-redesigned);
+    font: var(--font-m-redesigned);
+    min-height: 100vh;
 }
 
 .content-page {
