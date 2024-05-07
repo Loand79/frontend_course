@@ -832,7 +832,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
         "isArticlePageWasOpened": true
       },
@@ -851,8 +851,9 @@
         "isAppRedesigned": false
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
-        "isFirstVisit": true
+        "theme": "app_green_gray_theme",
+        "isFirstVisit": true,
+        "isArticlePageWasOpened": true
       },
       "avatar": "https://www.sostav.ru/articles/rus/2012/18.09/news/images/x5s0payf.jpg"
     },

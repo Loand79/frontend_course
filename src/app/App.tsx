@@ -33,15 +33,13 @@ function App() {
             }
             off={
                 <div className={classNames('app', { hovered: true, selected: false }, [theme])}>
-                    <div className={classNames('app_redesigned', { hovered: true, selected: false }, [theme])}>
-                        <Suspense fallback="">
-                            <Navbar />
-                            <div className="content-page">
-                                <Sidebar />
-                                <AppRouter />
-                            </div>
-                        </Suspense>
-                    </div>
+                    <Suspense fallback="">
+                        <Navbar />
+                        <div className="content-page">
+                            <Sidebar />
+                            <AppRouter />
+                        </div>
+                    </Suspense>
                 </div>
             }
         />
