@@ -6,13 +6,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { Text, TextTheme } from '@/shared/ui/Text';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 import { ProfileCard } from '@/entities/Profile';
-import {
-    DynamicModuleLoader,
-    ReducersList,
-} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { VStack } from '@/shared/ui/Stack';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { VStack } from '@/shared/ui/deprecated/Stack';
 import { ValidateErrors } from '../../model/consts/validateErrors';
 import { EditableProfilePageHeader } from '../EditableProfilePageHeader/ProfilePageHeader/ProfilePageHeader';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
@@ -44,9 +41,7 @@ export const EditableProfileCard = memo((props: editableProfileCardProps) => {
     const validateErrors = useSelector(getProfileValidateErrors);
 
     const validateErrorTranslate = {
-        [ValidateErrors.INCORRECT_USER_DATA]: t(
-            'Поля имя и фамилия должны быть заполнены',
-        ),
+        [ValidateErrors.INCORRECT_USER_DATA]: t('Поля имя и фамилия должны быть заполнены'),
         [ValidateErrors.INCORRECT_USER_AGE]: t('Некоректный возраст'),
         [ValidateErrors.NO_DATA]: t('Данные не указаны'),
         [ValidateErrors.SERVER_ERROR]: t('Ошибка сервера при сохранении'),
@@ -120,11 +115,7 @@ export const EditableProfileCard = memo((props: editableProfileCardProps) => {
                 <EditableProfilePageHeader />
                 {validateErrors?.length &&
                     validateErrors.map((err) => (
-                        <Text
-                            text={validateErrorTranslate[err]}
-                            theme={TextTheme.ERROR}
-                            key={err}
-                        />
+                        <Text text={validateErrorTranslate[err]} theme={TextTheme.ERROR} key={err} />
                     ))}
                 <ProfileCard
                     data={formData}

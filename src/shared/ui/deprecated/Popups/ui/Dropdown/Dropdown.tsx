@@ -2,7 +2,7 @@ import { Menu } from '@headlessui/react';
 import { Fragment, ReactNode } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { mapDirection } from '../../styles/consts';
-import { DropdownDirection } from '../../../../types/ui';
+import { DropdownDirection } from '@/shared/types/ui';
 import { AppLink } from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
 import popupCls from '../../styles/popups.module.scss';
@@ -27,13 +27,7 @@ export function Dropdown(props: DropdownProps) {
     const menuClasses = [mapDirection[direction]];
 
     return (
-        <Menu
-            as="div"
-            className={classNames(cls.Dropdown, {}, [
-                className,
-                popupCls.popup,
-            ])}
-        >
+        <Menu as="div" className={classNames(cls.Dropdown, {}, [className, popupCls.popup])}>
             <Menu.Button className={popupCls.trigger}>{trigger}</Menu.Button>
             <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
                 {items.map((item, index) => {
@@ -63,11 +57,7 @@ export function Dropdown(props: DropdownProps) {
                     }
 
                     return (
-                        <Menu.Item
-                            as={Fragment}
-                            disabled={item.disabled}
-                            key={`dropdown-key${index}`}
-                        >
+                        <Menu.Item as={Fragment} disabled={item.disabled} key={`dropdown-key${index}`}>
                             {content}
                         </Menu.Item>
                     );

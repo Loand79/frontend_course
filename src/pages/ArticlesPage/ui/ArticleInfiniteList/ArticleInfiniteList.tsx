@@ -5,7 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { ArticleList } from '@/entities/Article';
-import { Text } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/deprecated/Text';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import {
     getArticlePageError,
@@ -37,12 +37,5 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
         return <Text title={t('Ошибка загрузки статей')} />;
     }
 
-    return (
-        <ArticleList
-            isLoading={isLoading}
-            view={view}
-            articles={articles}
-            className={className}
-        />
-    );
+    return <ArticleList isLoading={isLoading} view={view} articles={articles} className={className} />;
 });

@@ -2,8 +2,8 @@ import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import ListIcon from '@/shared/assets/icons/list.svg?react';
 import TiledIcon from '@/shared/assets/icons/tiled.svg?react';
-import { Button } from '@/shared/ui/Button';
-import { Icon } from '@/shared/ui/Icon';
+import { Button } from '@/shared/ui/deprecated/Button';
+import { Icon } from '@/shared/ui/deprecated/Icon';
 import { ArticleView } from '../../entities/Article/model/consts/articleEnums';
 import cls from './ArticleViewToggler.module.scss';
 
@@ -40,7 +40,7 @@ export const ArticleViewToggler = memo((props: ArticleViewTogglerProps) => {
                         height={24}
                         Svg={viewType.icon}
                         className={classNames('', {
-                            [cls.selected]: viewType.view === view,
+                            [cls.notSelected]: viewType.view !== view,
                         })}
                     />
                 </Button>

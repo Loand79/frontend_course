@@ -11,8 +11,8 @@ import {
 } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Card } from '@/shared/ui/Card';
-import { Input } from '@/shared/ui/Input';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { Input } from '@/shared/ui/deprecated/Input';
 import { SortOrder } from '@/shared/types';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
@@ -103,17 +103,9 @@ export const ArticlePageFilters = memo((props: ArticlePageFiltersProps) => {
                 <ArticleViewToggler view={view} onViewClick={onChangeView} />
             </div>
             <Card className={cls.search}>
-                <Input
-                    value={search}
-                    onChange={onChangeSearch}
-                    placeholder={t('Поиск')}
-                />
+                <Input value={search} onChange={onChangeSearch} placeholder={t('Поиск')} />
             </Card>
-            <ArticleTypeTabs
-                className={cls.tabs}
-                value={type}
-                onChangeType={onChangeType}
-            />
+            <ArticleTypeTabs className={cls.tabs} value={type} onChangeType={onChangeType} />
         </div>
     );
 });

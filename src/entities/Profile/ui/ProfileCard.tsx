@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
-import { Input } from '@/shared/ui/Input';
-import { Loader } from '@/shared/ui/Loader';
-import { Avatar } from '@/shared/ui/Avatar';
+import { Text, TextAlign, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Loader } from '@/shared/ui/deprecated/Loader';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import { Country, CountrySelect } from '@/entities/Country';
-import { HStack, VStack } from '@/shared/ui/Stack';
+import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
 import { Profile } from '../../Profile/model/types/profile';
 import cls from './ProfileCard.module.scss';
 
@@ -45,14 +45,7 @@ export const ProfileCard = ({
 
     if (isLoading) {
         return (
-            <HStack
-                justify="center"
-                className={classNames(
-                    cls.profileCard,
-                    { [cls.loading]: true },
-                    [className],
-                )}
-            >
+            <HStack justify="center" className={classNames(cls.profileCard, { [cls.loading]: true }, [className])}>
                 <Loader />
             </HStack>
         );
@@ -60,14 +53,7 @@ export const ProfileCard = ({
 
     if (error) {
         return (
-            <HStack
-                justify="center"
-                max
-                className={classNames(cls.profileCard, {}, [
-                    className,
-                    cls.error,
-                ])}
-            >
+            <HStack justify="center" max className={classNames(cls.profileCard, {}, [className, cls.error])}>
                 <Text
                     theme={TextTheme.ERROR}
                     title={t('Произошла ошибка при загрузке профиля')}
@@ -83,11 +69,7 @@ export const ProfileCard = ({
     };
     // todo замутить инпут лист по всем полям Profile
     return (
-        <VStack
-            gap="16"
-            max
-            className={classNames(cls.profileCard, mods, [className])}
-        >
+        <VStack gap="16" max className={classNames(cls.profileCard, mods, [className])}>
             {data?.avatar && (
                 <HStack justify="center" className={cls.avatarWrapper}>
                     <Avatar src={data.avatar} size={100} />
@@ -144,12 +126,7 @@ export const ProfileCard = ({
                 onChange={onChangeCurrency}
                 readonly={readonly}
             />
-            <CountrySelect
-                className={cls.input}
-                value={data?.country}
-                onChange={onChangeCountry}
-                readonly={readonly}
-            />
+            <CountrySelect className={cls.input} value={data?.country} onChange={onChangeCountry} readonly={readonly} />
         </VStack>
     );
 };
