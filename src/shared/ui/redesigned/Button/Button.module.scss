@@ -1,49 +1,18 @@
 .button {
-    color: var(--main-color);
+    color: var(--text-redesigned);
     cursor: pointer;
     padding: 10px 15px;
 
     &:hover {
-        fill-opacity: 0.7;
-        opacity: 0.7;
-        stroke-opacity: 0.7;
+        color: var(--accent-redesigned);
     }
 }
 
-.clear,
-.clearInverted {
+.clear {
     background: none;
     border: none;
     outline: none;
     padding: 0;
-}
-
-.clearInverted {
-    color: var(--secondary-color);
-}
-
-.outline {
-    background: none;
-    border: 1px solid var(--main-color);
-    color: var(--main-color);
-}
-
-.outline_red {
-    background: none;
-    border: 1px solid var(--red-light);
-    color: var(--red-light);
-}
-
-.background {
-    background: var(--bg-color);
-    border: none;
-    color: var(--main-color);
-}
-
-.backgroundInverted {
-    background: var(--inverted-bg-color);
-    border: none;
-    color: var(--main-color);
 }
 
 .square {
@@ -75,6 +44,18 @@
 
 .size_xl {
     font-size: var(--font-size-xl);
+}
+
+.size_m {
+    font: var(--font-m-redesigned);
+}
+
+.size_l {
+    font: var(--font-l-redesigned);
+}
+
+.size_xl {
+    font: var(--font-xl-redesigned);
 }
 
 .disabled {

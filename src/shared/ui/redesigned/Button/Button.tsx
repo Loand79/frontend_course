@@ -2,18 +2,12 @@ import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
-export type ButtonTheme =
-    | 'clear'
-    | 'outline'
-    | 'background'
-    | 'backgroundInverted'
-    | 'clearInverted'
-    | 'outline_red';
+export type ButtonVariant = 'clear' | 'outline' | 'background' | 'backgroundInverted' | 'clearInverted' | 'outline_red';
 export type ButtonSize = 'size_m' | 'size_l' | 'size_xl';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    theme?: ButtonTheme;
+    variant?: ButtonVariant;
     square?: boolean;
     size?: ButtonSize;
     disabled?: boolean;
@@ -25,7 +19,7 @@ export const Button = memo((props: ButtonProps) => {
     const {
         className,
         children,
-        theme = 'outline',
+        variant = 'outline',
         square,
         size = 'size_m',
         disabled,
@@ -35,7 +29,6 @@ export const Button = memo((props: ButtonProps) => {
 
     const mods: Mods = {
         [cls.square]: square,
-        [cls[size]]: true,
         [cls.disabled]: disabled,
         [cls.fullwidth]: fullwidth,
     };
@@ -43,7 +36,7 @@ export const Button = memo((props: ButtonProps) => {
     return (
         <button
             type="button"
-            className={classNames(cls.button, mods, [className, cls[theme]])}
+            className={classNames(cls.button, mods, [className, cls[variant], cls[size]])}
             disabled={disabled}
             {...otherProps}
         >

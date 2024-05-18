@@ -27,9 +27,11 @@ function App() {
         <ToggleFeatures
             feature="isAppRedesigned"
             on={
-                <Suspense fallback="">
-                    <MainLayout header={<Navbar />} content={<AppRouter />} sidebar={<Sidebar />} />
-                </Suspense>
+                <div className={classNames('app_redesigned', { hovered: true, selected: false }, [theme])}>
+                    <Suspense fallback="">
+                        <MainLayout header={<Navbar />} content={<AppRouter />} sidebar={<Sidebar />} />
+                    </Suspense>
+                </div>
             }
             off={
                 <div className={classNames('app', { hovered: true, selected: false }, [theme])}>

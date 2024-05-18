@@ -22,65 +22,65 @@ Primary.args = {
 export const Clear = Template.bind({});
 Clear.args = {
     children: 'Text',
-    theme: 'clear',
+    variant: 'clear',
 };
 
 export const ClearInverted = Template.bind({});
 ClearInverted.args = {
     children: 'Text',
-    theme: 'clearInverted',
+    variant: 'clearInverted',
 };
 
 export const Outline = Template.bind({});
 Outline.args = {
     children: 'Text',
-    theme: 'outline',
+    variant: 'outline',
 };
 
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
     children: 'Text',
-    theme: 'outline',
+    variant: 'outline',
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const OutlineSizeL = Template.bind({});
 OutlineSizeL.args = {
     children: 'Text',
-    theme: 'outline',
+    variant: 'outline',
     size: 'size_l',
 };
 
 export const OutlineSizeXl = Template.bind({});
 OutlineSizeXl.args = {
     children: 'Text',
-    theme: 'outline',
+    variant: 'outline',
     size: 'size_xl',
 };
 
 export const Background = Template.bind({});
 Background.args = {
     children: 'Text',
-    theme: 'background',
+    variant: 'background',
 };
 
 export const BackgroundInverted = Template.bind({});
 BackgroundInverted.args = {
     children: 'Text',
-    theme: 'backgroundInverted',
+    variant: 'backgroundInverted',
 };
 
 export const Square = Template.bind({});
 Square.args = {
     children: '>',
-    theme: 'backgroundInverted',
+    variant: 'backgroundInverted',
     square: true,
 };
 
 export const SquareSizeL = Template.bind({});
 SquareSizeL.args = {
     children: '>',
-    theme: 'backgroundInverted',
+    variant: 'backgroundInverted',
     square: true,
     size: 'size_l',
 };
@@ -88,7 +88,7 @@ SquareSizeL.args = {
 export const SquareSizeXl = Template.bind({});
 SquareSizeXl.args = {
     children: '>',
-    theme: 'backgroundInverted',
+    variant: 'backgroundInverted',
     square: true,
     size: 'size_xl',
 };
@@ -96,6 +96,6 @@ SquareSizeXl.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
     children: '>',
-    theme: 'outline',
+    variant: 'outline',
     disabled: true,
 };
